@@ -1,0 +1,10 @@
+set cursorline          """下划线
+set number              """显示行号
+set showcmd             """右下角显示键入
+set wildmenu            """代码补全 智能提示
+set wrap                """自动换行
+set a new word hlsearch            """查找高亮
+map R :source $MYVIMRC<CR>"""重启
+map S :w<CR>            """保存
+syntax on
+

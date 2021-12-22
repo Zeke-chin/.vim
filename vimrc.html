@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>~/.vim/vimrc.html</title>
+<meta name="Generator" content="Vim/8.2">
+<meta name="plugin-version" content="vim8.1_v2">
+<meta name="syntax" content="vim">
+<meta name="settings" content="use_css,pre_wrap,no_foldcolumn,prevent_copy=,use_input_for_pc=fallback">
+<meta name="colorscheme" content="none">
+<style>
+<!--
+pre { white-space: pre-wrap; font-family: monospace; color: #ffffff; background-color: #000000; }
+body { font-family: monospace; color: #ffffff; background-color: #000000; }
+* { font-size: 1em; }
+.PreProc { color: #5fd7ff; }
+.Comment { color: #00ffff; }
+.Identifier { color: #00ffff; font-weight: bold; }
+.Constant { color: #ff40ff; }
+.Special { color: #ffd7d7; }
+.Statement { color: #ffff00; }
+-->
+</style>
+</head>
+<body>
+<pre id='vimCodeElement'>
+<span class="Statement">map</span> Q :q<span class="Special">&lt;</span><span class="Special">CR</span><span class="Special">&gt;</span>		&quot;&quot;&quot;退出
+<span class="Statement">map</span> R :source $MYVIMRC<span class="Special">&lt;</span><span class="Special">CR</span><span class="Special">&gt;</span>&quot;&quot;&quot;重启
+<span class="Statement">map</span> S :w<span class="Special">&lt;</span><span class="Special">CR</span><span class="Special">&gt;</span>		&quot;&quot;&quot;保存
+<span class="Statement">map</span> s <span class="Special">&lt;</span><span class="Special">nop</span><span class="Special">&gt;</span>		&quot;&quot;&quot;防止误触
+
+<span class="Statement">noremap</span> i k		&quot;&quot;&quot;上
+<span class="Statement">noremap</span> j h		&quot;&quot;&quot;下
+<span class="Statement">noremap</span> k j		&quot;&quot;&quot;左
+<span class="Statement">noremap</span> K 5j		&quot;&quot;&quot;快速下
+<span class="Statement">noremap</span> I 5k		&quot;&quot;&quot;快速上
+<span class="Statement">noremap</span> m i
+<span class="Statement">noremap</span> M I
+<span class="Statement">noremap</span> = nzz		&quot;&quot;&quot;在查找模式下换下一个查找目标并居中zz
+<span class="Statement">noremap</span> - Nzz		&quot;&quot;&quot;在查找模式下换上一个查找目标并居中zz
+
+<span class="Statement">map</span> sd :set splitright<span class="Special">&lt;</span><span class="Special">CR</span><span class="Special">&gt;</span>:vsplit<span class="Special">&lt;</span><span class="Special">CR</span><span class="Special">&gt;</span>
+<span class="Statement">map</span> sa :set nosplitright<span class="Special">&lt;</span><span class="Special">CR</span><span class="Special">&gt;</span>:vsplit<span class="Special">&lt;</span><span class="Special">CR</span><span class="Special">&gt;</span>
+<span class="Statement">map</span> sw :set nosplitbelow<span class="Special">&lt;</span><span class="Special">CR</span><span class="Special">&gt;</span>:split<span class="Special">&lt;</span><span class="Special">CR</span><span class="Special">&gt;</span>
+<span class="Statement">map</span> sx :set splitbelow<span class="Special">&lt;</span><span class="Special">CR</span><span class="Special">&gt;</span>:split<span class="Special">&lt;</span><span class="Special">CR</span><span class="Special">&gt;</span>
+<span class="Statement">map</span> sq <span class="Special">&lt;</span><span class="Special">C-w</span><span class="Special">&gt;</span>t<span class="Special">&lt;</span><span class="Special">C-w</span><span class="Special">&gt;</span>K		&quot;&quot;&quot;改成上下分屏
+<span class="Statement">map</span> se <span class="Special">&lt;</span><span class="Special">C-w</span><span class="Special">&gt;</span>t<span class="Special">&lt;</span><span class="Special">C-w</span><span class="Special">&gt;</span>H		&quot;&quot;&quot;改成左右分屏
+<span class="Comment">&quot;&quot;&quot;上下左右</span>
+<span class="Statement">map</span> <span class="Special">&lt;</span><span class="Special">LEADER</span><span class="Special">&gt;</span>i <span class="Special">&lt;</span><span class="Special">C-w</span><span class="Special">&gt;</span>j
+<span class="Statement">map</span> <span class="Special">&lt;</span><span class="Special">LEADER</span><span class="Special">&gt;</span>k <span class="Special">&lt;</span><span class="Special">C-w</span><span class="Special">&gt;</span>k
+<span class="Statement">map</span> <span class="Special">&lt;</span><span class="Special">LEADER</span><span class="Special">&gt;</span>j <span class="Special">&lt;</span><span class="Special">C-w</span><span class="Special">&gt;</span>h
+<span class="Statement">map</span> <span class="Special">&lt;</span><span class="Special">LEADER</span><span class="Special">&gt;</span>l <span class="Special">&lt;</span><span class="Special">C-w</span><span class="Special">&gt;</span>l
+
+<span class="Comment">&quot;&quot;&quot;↑↓←→分别表示分屏大小</span>
+<span class="Statement">map</span> <span class="Special">&lt;</span><span class="Special">up</span><span class="Special">&gt;</span> :res -5<span class="Special">&lt;</span><span class="Special">CR</span><span class="Special">&gt;</span>
+<span class="Statement">map</span> <span class="Special">&lt;</span><span class="Special">down</span><span class="Special">&gt;</span> :res +5<span class="Special">&lt;</span><span class="Special">CR</span><span class="Special">&gt;</span>
+<span class="Statement">map</span> <span class="Special">&lt;</span><span class="Special">left</span><span class="Special">&gt;</span> :vertical resize+5<span class="Special">&lt;</span><span class="Special">CR</span><span class="Special">&gt;</span>
+<span class="Statement">map</span> <span class="Special">&lt;</span><span class="Special">right</span><span class="Special">&gt;</span> :vertical resize-5<span class="Special">&lt;</span><span class="Special">CR</span><span class="Special">&gt;</span>
+
+<span class="Statement">map</span> tr :tabe<span class="Special">&lt;</span><span class="Special">CR</span><span class="Special">&gt;</span>    &quot;&quot;&quot;打开新的标签页
+<span class="Statement">map</span> tf :-tabnext<span class="Special">&lt;</span><span class="Special">CR</span><span class="Special">&gt;</span>&quot;&quot;&quot;左一标签页
+<span class="Statement">map</span> tg :+tabnext<span class="Special">&lt;</span><span class="Special">CR</span><span class="Special">&gt;</span>&quot;&quot;&quot;右一标签页
+
+<span class="Statement">set</span> <span class="PreProc">cursorline</span>		<span class="Comment">&quot;&quot;&quot;下划线</span>
+<span class="Statement">set</span> <span class="PreProc">showcmd</span>		<span class="Comment">&quot;&quot;&quot;右下角显示键入</span>
+<span class="Statement">set</span> <span class="PreProc">wildmenu</span>		<span class="Comment">&quot;&quot;&quot;代码补全 智能提示</span>
+<span class="Statement">set</span> <span class="PreProc">wrap</span>		<span class="Comment">&quot;&quot;&quot;自动换行</span>
+
+<span class="Statement">set</span> <span class="PreProc">hlsearch</span>		<span class="Comment">&quot;&quot;&quot;查找高亮</span>
+<span class="Comment">&quot;&quot;&quot;去除进去时显示上次搜索高亮</span>
+<span class="Statement">exec</span> <span class="Constant">&quot;nohlsearch</span><span class="Constant">&quot;</span>
+<span class="Statement">set</span> <span class="PreProc">incsearch</span>		<span class="Comment">&quot;&quot;&quot;边输入边高亮</span>
+<span class="Statement">set</span> <span class="PreProc">ignorecase</span>		<span class="Comment">&quot;&quot;&quot;忽略大小写</span>
+<span class="Statement">set</span> <span class="PreProc">smartcase</span>		<span class="Comment">&quot;&quot;&quot;智能大小写</span>
+
+<span class="Statement">let</span> <span class="Identifier">mapleader</span><span class="Statement">=</span><span class="Constant">&quot; </span><span class="Constant">&quot;</span>
+<span class="Comment">&quot;&quot;&quot;空格 + ↵ 取消高亮 </span>
+<span class="Statement">noremap</span> <span class="Special">&lt;</span><span class="Special">LEADER</span><span class="Special">&gt;</span><span class="Special">&lt;</span><span class="Special">CR</span><span class="Special">&gt;</span> :nohlsearch<span class="Special">&lt;</span><span class="Special">CR</span><span class="Special">&gt;</span>
+
+<span class="Comment">&quot;&quot;call  plug#begin ( ' ~/.vim/plugged ' )</span>
+<span class="Comment">&quot;&quot;Plug 'connorholyday/vim-snazzy'</span>
+<span class="Comment">&quot;&quot;Plug 'vim-airline/vim-airline'</span>
+
+<span class="Comment">&quot;&quot;call plug#end()</span>
+<span class="Comment">&quot;&quot;let g:SnazzyTransparent = 1</span>
+
+<span class="Comment">&quot;&quot;以下是Plug的配置</span>
+<span class="Statement">call</span> plug#begin<span class="Special">(</span><span class="Constant">'~/.vim/plugged'</span><span class="Special">)</span>
+
+Plug 'junegunn/vim-easy-align'
+Plug 'connorholyday/vim-snazzy'
+Plug 'vim-airline/vim-airline'
+<span class="Statement">call</span> plug#end<span class="Special">()</span>
+
+<span class="Statement">let</span> <span class="Identifier">g:SnazzyTransparent</span> <span class="Statement">=</span> <span class="Constant">1</span>
+</pre>
+</body>
+</html>
+<!-- vim: set foldmethod=manual : -->
