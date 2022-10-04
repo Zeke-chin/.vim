@@ -48,6 +48,13 @@ set encoding=utf-8	"""文件编码
 let &t_ut=''		"""文件配置
 "set mouse=a		"""允许使用鼠标🖱️
 
+
+"""tab自定义
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set expandtab
+
 """ 光标自定义
 let &t_SI = "\<Esc>]50;CursorShape=1\x7"
 let &t_SR = "\<Esc>]50;CursorShape=2\x7"
